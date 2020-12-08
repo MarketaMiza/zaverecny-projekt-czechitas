@@ -1,0 +1,43 @@
+.button-link-wrapper {
+    text-align: center;
+}
+
+.button-link {
+ padding: 0;
+ border: none;
+ font: inherit;
+ color: inherit;
+ background-color: transparent;
+ cursor: pointer;
+}
+
+.button-link:focus {
+    outline: 0;
+}
+
+.button-link {
+    padding: 5px 10px;
+    outline: 1px dotted rgba(8, 8, 8, 0.89);
+    color: $color-button;
+}
+
+.button-link:hover {
+    color: $color-button-hover;
+}
+
+.owl-nav {
+    text-align: center;
+}
+
+.owl-prev {
+    margin-right: 10px
+}
+
+.owl-next {
+    margin-left: 10px
+}
+
+.nav-button {
+    font-size: 1.5rem;
+    font-weight: 100;
+}

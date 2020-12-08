@@ -1,0 +1,51 @@
+//sekce s články, která mě asi zabije...
+
+.article-main {
+  margin: 110px 0 0 0;
+}
+
+.article-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  padding: 0.5rem;
+  margin: 1rem;
+}
+
+.article-preview-wrapper {
+  margin: auto;
+  width: 90%;
+}
+
+.article-preview {
+  display: block;
+  /* margin: auto; */
+  flex-basis: calc((100% / 2) - 20px); 
+}
+
+.article-preview__image {
+  width: 100%;
+  border: 0;
+}
+
+//ARTICLES - pro PC verzi platí, že - objeví se dva sloupce - vedle sebe jsou dva články
+@media screen and (min-width: 1000px) {
+
+  .article-preview-wrapper {
+    width: 60%;
+  }
+  
+  .article-box {
+    display: flex;
+    flex-direction: row;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .article-box img {
+    object-fit: cover;
+    height: 500px;
+  }
+}

@@ -1,0 +1,142 @@
+//nastavení pro celý ten report - platí i pro ostatní reporty /ještěd a marmolade a vybaveni/
+.container-report {
+  max-width: 1000px;
+  /* margin: auto; */
+  margin-top: 110px;
+  padding: 10px 20px;
+}
+
+.snezka-image-gallery {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "snezka-img-1 snezka-img-1 snezka-img-1"
+    "snezka-img-2 snezka-img-2 snezka-img-2"
+    "snezka-img-3 snezka-img-3 snezka-img-3"
+    "snezka-img-4 snezka-img-4 snezka-img-4"
+    ;
+}
+
+.snezka-img-1,
+.snezka-image-gallery a {
+  min-width: auto;
+}
+
+.snezka-image-gallery a {
+  width: 100%;
+  height: 20rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.snezka-image-gallery a i {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 3rem;
+  position: relative;
+  z-index: 100;
+  padding: 1rem 3rem;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 0.4rem;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.snezka-image-gallery a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.snezka-image-gallery a:hover i,
+.snezka-image-gallery a:hover::before {
+  opacity: 0.5;
+}
+
+.snezka-img-1 {
+  grid-area: snezka-img-1;
+  min-height: 20rem;
+  background-image: url(../images/images_snezka/snezka1.jpg);
+}
+
+.snezka-img-2 {
+  grid-area: snezka-img-2;
+  background-image: url(../images/images_snezka/snezka2.jpg);
+}
+
+.snezka-img-3 {
+  grid-area: snezka-img-3;
+  background-image: url(../images/images_snezka/snezka3.jpg);
+}
+
+.snezka-img-4 {
+  grid-area: snezka-img-4;
+  background-image: url(../images/images_snezka/snezka4.jpg);
+}
+
+
+/* nastavení pro desktop */
+@media screen and (min-width: 1200px) {
+  .snezka-image-gallery {
+    max-width: 120rem;
+    grid-template-areas:
+    "snezka-img-2 snezka-img-1 snezka-img-1"
+    "snezka-img-2 snezka-img-3 snezka-img-3"
+    "snezka-img-4 snezka-img-4 snezka-img-4"
+      ;
+  }
+
+  .snezka-image-gallery a {
+    height: 100%;
+  }
+  .snezka-img-2 {
+    min-height: 50.5rem;
+  }
+
+  .snezka-img-4 {
+    min-width: 51.5rem;
+  } 
+
+}
+
+/* nastavení pro tablet */
+@media screen and (min-width: 900px) {
+
+  .snezka-image-gallery {
+    grid-template-areas:
+    "snezka-img-2 snezka-img-1 snezka-img-1"
+    "snezka-img-2 snezka-img-3 snezka-img-3"
+    "snezka-img-4 snezka-img-4 snezka-img-4"
+   ; 
+  }
+
+  .snezka-image-gallery a {
+    height: 20rem;
+  }
+  
+  .snezka-img-2 {
+    min-height: 50.5rem;
+  }
+
+.snezka-img-4 {
+    min-height: 20rem;
+  } 
+
+  .snezka-img-1,
+  .snezka-img-3 {
+    min-height: 25rem;
+  }
+} 

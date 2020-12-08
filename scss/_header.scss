@@ -1,0 +1,43 @@
+header {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 110px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+
+.header__logo {
+  grid-area: logo;
+  justify-self: start;
+}
+
+.logo {
+  width: 6.25rem;
+  position: absolute;
+}
+
+@media screen and (min-width: 1000px) {
+  header {
+    padding: 25px 50px;
+    max-width: 100rem;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas: 
+    "logo menu"
+  }
+
+.logo {
+  place-self: center;
+  
+}
+ .header__menu {
+   place-self: center;
+ }
+
+}
+
+

@@ -1,0 +1,49 @@
+---
+layout: layouts/moje-sablona.njk
+nadpis: Free Alpine Minds
+---
+
+<section class="hero">
+  <img
+    class="hero__photo"
+    src="/images/daniel-plan-NYtVYnsyX04-unsplash.jpg"
+    alt="Photo by Daniel Plan from Unsplash"
+  />
+</section>
+
+<section class="active-mainpage">
+  <p>Milujeme hory a lezení.</p>
+  <p>Roku 2016 byl položen slib. Slib, který čtyři roky ležel v našich srdcích. A to až do roku 2020! Nyní se stavíme vstříc našim výzvám, naším cílům! <strong> Vylézt společně na Mont Blanc! </strong></p>
+</section> 
+
+<div class="nadpis__mainpage">
+  <h2>nejnovější články</h2>
+</div>
+
+<section class="article-box">
+<div class="owl-carousel">
+{% for clanek in collections.titulka %}
+<div class="article-preview-wrapper">
+  <article class="article-preview">
+    <div class="imageholder">
+      <img class="article-preview__image"
+      src="/images/{{ clanek.data.image }}" alt="{{ clanek.data.nadpis }}">
+    </div>
+    <a href="{{ clanek.url }}"></a>
+    <h3> {{ clanek.data.nadpis }} </h3>
+    <p> {{ clanek.data.perex }} </p>
+    <p class="button-link-wrapper">
+      <a href="{{ clanek.url }}">
+        <button class="button-link">číst dál</button>
+      </a>
+    </p>
+  </article>
+</div>
+{% endfor %}
+</div>
+</section>
+
+<script src="/js/jquery.js">
+</script>
+<script src="/js/owl.carousel.js"></script>
+<script src="/js/javascript.js"></script>

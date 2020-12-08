@@ -1,0 +1,71 @@
+
+.container-contact {
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 110px;
+    padding: 10px 20px;
+}
+
+.container-contact {
+    width: 100%;
+    display: grid;
+   
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "contact__photo contact__photo"
+    "contact__nadpis contact__nadpis"
+    "contact__text contact__text"
+    "contact__social contact__social" ;
+}
+
+.contact__photo { grid-area: contact__photo;}
+.contact__nadpis { grid-area: contact__nadpis;}
+.contact__text { grid-area: contact__text;}
+.contact__social { grid-area: contact__social;}
+
+
+.contact__photo {
+width: 25rem;
+height: 25rem;
+margin: 6px 0;
+object-fit: cover;
+background-color: rgb(226, 225, 225);
+background-size: cover;
+background-repeat: no-repeat;
+border-radius: 50%;
+}
+
+.contact__nadpis {
+    font-size: 2vw;
+    text-align: justify;
+}
+
+.fb-img {
+    width: 70px;
+}
+
+li {
+    list-style: none;
+    margin: 10px;
+}
+
+.contact__text {
+    display: block;
+}
+ 
+.contact__social {
+    padding: 0;
+    display: flex; 
+} 
+
+@media screen and (min-width: 1000px) {
+    .contact__container {
+        max-width: 100rem;
+        grid-template-areas:
+    "contact__photo contact__nadpis"
+    "contact__text contact__text"
+    "contact__social contact__social" ;
+    }
+
+}

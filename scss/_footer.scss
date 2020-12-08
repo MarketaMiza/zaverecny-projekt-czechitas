@@ -1,0 +1,39 @@
+//patinka - copyright/rok/název/socky/MM
+
+footer {
+    background-color: rgb(240, 233, 233);
+    font-family: $font-main;
+    text-align: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "fam fam fam"
+    "socialmedia socialmedia socialmedia"
+    "design design design";
+    
+}
+
+.icon {
+    width: 2rem;
+}
+
+.fam { grid-area: fam;}
+.socialmedia { grid-area: socialmedia; place-self: center;}
+.design { grid-area: design;}
+
+.facebook,
+.instagram,
+.youtube {
+  margin: 1rem;
+}
+
+@media screen and (min-width: 1000px) {
+  footer {
+    display: grid;
+    grid-template-areas: 
+    "fam socialmedia design"
+   ;
+  }
+}
